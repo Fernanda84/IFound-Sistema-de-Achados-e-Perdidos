@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}IFound - Achados e perdidos{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">IFound - Achados e perdidos</div>
+        <nav class="nav-links">
+            <a href="{% url 'index' %}" class="active">Página Inicial</a>
+            <a href="#">Meus Itens</a>
+            <a href="#">Cadastro de itens</a>
+        </nav>
+    </header>
+
+    <!-- Conteúdo dinâmico das páginas -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>
